@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    unsigned long long factorial = 1; // Use long long to handle large factorials
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (n < 0)
+        cout << "Factorial of a negative number doesn't exist.";
+    else {
+        for (int i = 1; i <= n; ++i) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << n << " = " << factorial;
+    }
+
+    return 0;
+}
